@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>THE MAD LIONS</title>
+<meta name="robots" content="noindex">
+<style>html,body{margin:0;height:100%;background:#0f1115;color:#e9ecf1;font:15px/1.4 system-ui,sans-serif}body{display:grid;place-items:center}a{color:#7ab8ff}</style>
+<script>
+  // go.themadlions.com/s/Ab3dEf9hJk2L opens the app at #/s/Ab3dEf9hJk2L (the same for /sl/, /n/, /d/, /e/, /inv/, /pr/, /ps/)
+  var APP = 'https://alexisdigipro-hub.github.io/themadlions-projects/';
+  var path = location.pathname.replace(/^\/+|\/+$/g, '');
+  var to = path ? APP + '#/' + path + location.search : APP + (location.hash || '');
+  location.replace(to);
+</script>
+</head>
+<body>
+<p>Opening… <a id="go" href="https://alexisdigipro-hub.github.io/themadlions-projects/">tap here</a> if nothing happens.</p>
+<script>document.getElementById('go').href = to</script>
+</body>
+</html>
