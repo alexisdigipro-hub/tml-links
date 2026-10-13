@@ -20,8 +20,12 @@
 <script>
   // go.themadlions.com/s/Ab3dEf9hJk2L opens the app at #/s/Ab3dEf9hJk2L (the same for /sl/, /n/, /d/, /e/, /inv/, /pr/, /ps/)
   var APP = 'https://alexisdigipro-hub.github.io/themadlions-projects/';
+  // links made from 13 Oct are go.themadlions.com/?s/Ab3dEf9hJk2L: the address is this very page, so a
+  // chat gets it with 200 and shows the logo (a /s/... address only exists as 404.html, answered 404,
+  // and chats skip 404 pages); the older /s/... links keep working through 404.html
   var path = location.pathname.replace(/^\/+|\/+$/g, '');
-  var to = path ? APP + '#/' + path + location.search : APP + (location.hash || '');
+  var q = location.search.slice(1);
+  var to = path ? APP + '#/' + path + location.search : /^[a-z]+\//.test(q) ? APP + '#/' + q : APP + (location.hash || '');
   location.replace(to);
 </script>
 </head>
